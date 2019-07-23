@@ -1,0 +1,77 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+name: CSI Atlante
+url: 'https://github.com/SITA-RegionePiemonte/qgis_plugins/CSI-Atlante.git'
+landingURL: 'https://github.com/SITA-RegionePiemonte/qgis_plugins/CSI-Atlante'
+releaseDate: '2019-07-23'
+softwareVersion: true
+developmentStatus: stable
+softwareType: addon
+platforms:
+  - windows
+  - linux
+  - mac
+inputTypes:
+  - text/plan
+  - text/json
+  - xml
+usedBy:
+  - Regione Piemonte
+  - Città Metropolitana di Torino
+  - Città di Torino
+categories:
+  - data-visualization
+  - geographic-information-systems
+dependsOn:
+  open:
+    - name: QGIS
+      versionMin: '2.12'
+      versionMax: '2.18'
+maintenance:
+  type: internal
+  contacts:
+    - name: 'Diego Mo '
+      email: diego.mo@csi.it
+legal:
+  license: GPL-2.0-or-later
+  mainCopyrightOwner: Regione Piemonte
+  repoOwner: Regione Piemonte
+intendedAudience:
+  scope:
+    - local-authorities
+  countries:
+    - it
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - it
+it:
+  conforme:
+    modelloInteroperabilita: true
+  piattaforme:
+    spid: true
+description:
+  it:
+    localisedName: CSI Atlante
+    genericName: CSI Atlante - QGIS Plugin
+    shortDescription: CSI Atlante - Accesso organizzato a dati e geoservizi
+    longDescription: >
+      CSI Atlante è un plugin del software GIS open source QGIS,
+      pensato per un'organizzazione (enti pubblici, singoli dipartimenti/direzioni,...) 
+      dove gli amministratori del Sistema Informativo Territoriale (SIT)
+      guidano, attraverso un catalogo strutturato, gli
+      utilizzatori finali di QGIS all'accesso ai dati vettoriali (PostGIS) e
+      i geoservizi (WMS) di riferimento.
+      L'alberatura dei cataloghi è definita in specifici file json, sono disponibili alcuni file di esempio con dati e geoservizi della Regione Piemonte.
+      Il plugin funziona con le versioni di QGIS dall 2.12 alla 2.18, è in corso il proting per le versioni di QGIS 3.x
+    features:
+      - Presentazione di dati geografici
+      - Ricerca di dati geografici
+      - Tematizzazione dati geografici
+      - Profilazione per gruppi di utenti
+    screenshots:
+      - 'plugin_CSI_Atlante_1.jpg'
+      - 'plugin_CSI_Atlante_2.jpg'

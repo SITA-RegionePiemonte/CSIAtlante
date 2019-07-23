@@ -1,0 +1,6 @@
+<!DOCTYPE connections>
+<qgsPgConnections version="1.0">
+    <postgis port="5432" saveUsername="true" password="password" savePassword="true" sslmode="1" service="" username="utente" host="dbhost1.csi.it" database="DATABASE" name="utente@dbhost1.csi.it" estimatedMetadata="false"/>
+    <postgis port="5432" saveUsername="true" password="password" savePassword="true" sslmode="1" service="" username="utente" host="dbhost2.csi.it" database="DATABASE" name="utente@dbhost2.csi.it" estimatedMetadata="false"/>
+    <postgis port="5432" saveUsername="true" password="password" savePassword="true" sslmode="1" service="" username="utente" host="dbhost3.csi.it" database="DATABASE" name="utente@dbhost3.csi.it" estimatedMetadata="false"/>
+</qgsPgConnections>

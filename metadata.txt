@@ -1,0 +1,116 @@
+; Mandatory items:
+[general]
+name=CSI Atlante
+qgisMinimumVersion=2.0
+description=Accesso organizzato a dati e geoservizi
+version=2.0.07
+author=Enzo Ciarmoli
+email=supporto.gis@csi.it
+; end of mandatory metadata
+
+; Optional items:
+
+; Allowed values for "category" are: Vector, Raster, Database, Web and Layers.
+category=Plugin
+
+changelog=
+    2.0.07 : wms cacheFile: solo nome e cartella cache unica
+    2.0.06 : sga tools: chart georiferiti
+    2.0.05 : ottimizzazioni indicatori jira
+    2.0.04 : sga tools: title + subtitle
+    2.0.03 : bug vectorlayer not in range (128)
+    2.0.02 : tool identify con grafici d3/js per serie storica
+    2.0.01 : bug schede visibili flag non esiste
+    2.0.0  : accesso a nuovi servizi osgis2
+    1.0.35 : gestione metadati wmstree
+    1.0.34 : casella contatti segnalazioni
+    1.0.33 : feedback da servizio di login
+    1.0.32 : bug grafici indicatori
+    1.0.31 : bug dialogo metadati non disponibili
+    1.0.30 : bug su caricamento intero ramo vector
+    1.0.29 : tab raster aggiunto idimmagine e isValid
+    1.0.28 : compress decompress connessioni e servizi
+    1.0.27 : patch vm-osstore1
+    1.0.26 : retrocompatibile con servizi osgis
+    1.0.25 : slot su cambio servizio
+    1.0.24 : bug su combo del servizio corrente
+    1.0.23 : ordine tab dinamico
+    1.0.22 : introdotti idAlb* e idtree
+    1.0.21 : visibilita' schede da conf
+    1.0.20 : rilascio indicatori
+    1.0.19 : raffinamenti grafici
+    1.0.18 : ChartInfoMap Object
+    1.0.17 : grafici serie storica
+    1.0.16 : serie storica indicatori
+    1.0.15 : filtri aggiuntivi indicatori
+    1.0.14 : singleton logger manager
+    1.0.13 : qml e riclassificazione indicatori
+    1.0.12 : combo aggiuntive tab indicatori
+    1.0.11 : json ottenuto da doctrine
+    1.0.10 : abilita/disabilita tab
+    1.0.09 : progress cache geoservizi
+    1.0.08 : default cache geoservizi
+    1.0.07 : bug cursor wait
+    1.0.06 : gestione log per debug
+    1.0.05 : caricamento in toc con ordine alberatura
+    1.0.04 : wms parse capabilities con urllib2
+    1.0.03 : clausola where da configurazione
+    1.0.02 : qgis 2.4 deprecation 
+    1.0.01 : wms parse capabilities 
+    1.0.0  : versione stabile con nuovi db e servizi
+    0.2.39 : legenda qml anche per categoria generica
+    0.2.38 : bug legenda qml
+    0.2.37 : cache wms per ciascun servizio
+    0.2.36 : priorita' crs del layer sul crs del mapCanvas
+    0.2.35 : aggiunta categoria tutto nel tree vector
+    0.2.34 : id separati per categoria nel tree vector
+    0.2.33 : bug caricamento wms con layer padre senza tag name
+    0.2.32 : bug caricamento wms con spazi nel name
+    0.2.31 : bug caricamento tab iniziale
+    0.2.30 : aggiorna o azzera elenchi
+    0.2.29 : refresh al cambio servizio di connessione
+    0.2.28 : utente,schema al posto di schema,owner
+    0.2.27 : folder icons
+    0.2.26 : conf\extend con salva progetto
+    0.2.25 : bug json
+    0.2.24 : bug export servizi
+    0.2.23 : bug carica progetto
+    0.2.22 : bug cambio servizio http
+    0.2.21 : bug salva progetto
+    0.2.20 : caricamento tabelle senza geometria
+    0.2.19 : localizzazione i18n e QTranslator
+    0.2.18 : conf\extend con salva progetto
+    0.2.17 : bug caricamento progetti da servizio 
+    0.2.16 : caricamento wms stampabili fissando tile size
+    0.2.15 : caricamento wms solo radice dell'albero
+    0.2.14 : bug caricamento wms
+    0.2.13 : gestione password db
+    0.2.12 : gestione comportamento locale
+    0.2.11 : bug parsing wms
+    0.2.10 : gestione caso metadati non disponibili
+    0.2.09 : dialogo about con metadati dinamici
+    0.2.08 : refactoring classi per gestire servizi ex cloud
+    0.2.07 : import da file di servizi json e connessioni db
+    0.2.06 : export su file di servizi json e connessioni db
+    0.2.05 : caricamento dati postgis: gestione owner e schema 
+    0.2.04 : interfaccia al Database Manager plugin  
+    0.2.03 : caricamento raster: gestione visibilita'
+    0.2.02 : caricamento wms per gruppi e rimosso tab csw
+    0.2.01 : aggiunta modalita wms per qgis 2.0
+    0.2    : swicthed to PyQt API version 2
+    0.1.22 : ultima versione per qgis 1.8
+
+; tags are comma separated with spaces allowed
+tags=data,postgis,wms,raster,load,config,catalog,organize
+
+;homepage=http://hub.qgis.org/projects/csiatlante
+;tracker=http://hub.qgis.org/projects/csiatlante/issues
+;repository=http://hub.qgis.org/projects/csiatlante/repository
+;icon=icon.png
+
+; experimental flag
+experimental=False
+
+; deprecated flag (applies to the whole plugin, not just a single version
+deprecated=False
+

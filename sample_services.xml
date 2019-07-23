@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csiServices version="1.0" >
+    <service name="DEFAULT" url="http://osgis2.csi.it/csiatlante/prod/atlante/qgsinit.php" usr="utente" pwd="password"/>
+</csiServices>
