@@ -4,8 +4,8 @@
 
 publiccodeYmlVersion: '0.2'
 name: CSI Atlante
-url: 'https://github.com/SITA-RegionePiemonte/qgis_plugins/CSI-Atlante.git'
-landingURL: 'https://github.com/SITA-RegionePiemonte/qgis_plugins/CSI-Atlante'
+url: 'https://github.com/SITA-RegionePiemonte/csiatlante.git'
+landingURL: 'https://github.com/SITA-RegionePiemonte/csiatlante'
 releaseDate: '2019-07-23'
 softwareVersion: true
 developmentStatus: stable
@@ -64,14 +64,14 @@ description:
       dove gli amministratori del Sistema Informativo Territoriale (SIT)
       guidano, attraverso un catalogo strutturato, gli
       utilizzatori finali di QGIS all'accesso ai dati vettoriali (PostGIS) e
-      i geoservizi (WMS) di riferimento.
-      L'alberatura dei cataloghi è definita in specifici file json, sono disponibili alcuni file di esempio con dati e geoservizi della Regione Piemonte.
-      Il plugin funziona con le versioni di QGIS dall 2.12 alla 2.18, è in corso il proting per le versioni di QGIS 3.x
+      ai geoservizi (WMS) di riferimento.
+      L'alberatura dei cataloghi è definita in specifici file json; sono disponibili alcuni file di esempio con dati e geoservizi della Regione Piemonte.
+      Il plugin funziona con le versioni di QGIS dalla 2.12 alla 2.18; è in corso il porting per le versioni di QGIS 3.x.
     features:
       - Presentazione di dati geografici
       - Ricerca di dati geografici
       - Tematizzazione dati geografici
       - Profilazione per gruppi di utenti
     screenshots:
-      - 'plugin_CSI_Atlante_1.jpg'
-      - 'plugin_CSI_Atlante_2.jpg'
+      - 'screenshots/plugin_CSI_Atlante_1.jpg'
+      - 'screenshots/plugin_CSI_Atlante_2.jpg'
