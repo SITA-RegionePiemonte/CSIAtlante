@@ -4,8 +4,8 @@
 
 publiccodeYmlVersion: '0.2'
 name: CSI Atlante
-url: 'https://github.com/SITA-RegionePiemonte/csiatlante.git'
-landingURL: 'https://github.com/SITA-RegionePiemonte/csiatlante'
+url: 'https://github.com/SITA-RegionePiemonte/CSIAtlante.git'
+landingURL: 'https://github.com/SITA-RegionePiemonte/CSIAtlante'
 releaseDate: '2019-07-23'
 softwareVersion: true
 developmentStatus: stable
