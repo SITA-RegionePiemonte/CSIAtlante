@@ -7,7 +7,7 @@ name: CSI Atlante
 url: 'https://github.com/SITA-RegionePiemonte/CSIAtlante.git'
 landingURL: 'https://github.com/SITA-RegionePiemonte/CSIAtlante'
 releaseDate: '2019-07-23'
-softwareVersion: true
+softwareVersion: '1.0'
 developmentStatus: stable
 softwareType: addon
 platforms:
@@ -17,7 +17,7 @@ platforms:
 inputTypes:
   - text/plan
   - text/json
-  - xml
+  - text/xml
 usedBy:
   - Regione Piemonte
   - Città Metropolitana di Torino
