@@ -49,29 +49,33 @@ localisation:
   availableLanguages:
     - it
 it:
+  countryExtensionVersion: '0.2'
   conforme:
     modelloInteroperabilita: true
   piattaforme:
     spid: true
+  riuso:
+    codiceIPA: r_piemon
 description:
   it:
     localisedName: CSI Atlante
     genericName: CSI Atlante - QGIS Plugin
     shortDescription: CSI Atlante - Accesso organizzato a dati e geoservizi
     longDescription: >
-      CSI Atlante è un plugin del software GIS open source QGIS,
-      pensato per un'organizzazione (enti pubblici, singoli dipartimenti/direzioni,...) 
+      CSI Atlante è un plugin del software GIS open source QGIS, pensato per
+      un'organizzazione (enti pubblici, singoli dipartimenti/direzioni,...) 
       dove gli amministratori del Sistema Informativo Territoriale (SIT)
-      guidano, attraverso un catalogo strutturato, gli
-      utilizzatori finali di QGIS all'accesso ai dati vettoriali (PostGIS) e
-      ai geoservizi (WMS) di riferimento.
-      L'alberatura dei cataloghi è definita in specifici file json; sono disponibili alcuni file di esempio con dati e geoservizi della Regione Piemonte.
-      Il plugin funziona con le versioni di QGIS dalla 2.12 alla 2.18; è in corso il porting per le versioni di QGIS 3.x.
+      guidano, attraverso un catalogo strutturato, gli utilizzatori finali di
+      QGIS all'accesso ai dati vettoriali (PostGIS) e ai geoservizi (WMS) di
+      riferimento. L'alberatura dei cataloghi è definita in specifici file json;
+      sono disponibili alcuni file di esempio con dati e geoservizi della
+      Regione Piemonte. Il plugin funziona con le versioni di QGIS dalla 2.12
+      alla 2.18; è in corso il porting per le versioni di QGIS 3.x.
     features:
       - Presentazione di dati geografici
       - Ricerca di dati geografici
       - Tematizzazione dati geografici
       - Profilazione per gruppi di utenti
     screenshots:
-      - 'screenshots/plugin_CSI_Atlante_1.jpg'
-      - 'screenshots/plugin_CSI_Atlante_2.jpg'
+      - screenshots/plugin_CSI_Atlante_1.jpg
+      - screenshots/plugin_CSI_Atlante_2.jpg
