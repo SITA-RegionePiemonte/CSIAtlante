@@ -1,0 +1,16 @@
+{
+  "wms": [],
+  "postgis": [],
+  "progetto": [
+    {
+      "categoria": "DB TOPOGRAFICO",
+      "id": "3",
+      "idpadre": "",
+      "nome": "PROGETTO 1",
+      "host": "tst-domdb35.csi.it",
+      "porta": "5432",
+      "dbname": "PGISTST1",
+      "abspath": ""
+    }
+  ]
+}

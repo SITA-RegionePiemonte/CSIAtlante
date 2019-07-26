@@ -1,0 +1,730 @@
+{{
+  "wms": [
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Sfondo cartografico Regione Piemonte colore",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_sfondo_bdtre.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_sfondo_bdtre.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:d83488c6-c90e-4b5e-9a02-8f8a64aef781"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Sfondo cartografico Regione Piemonte B/N",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_sfondo_bdtre_bn.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_sfondo_bdtre_bn.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:d83488c6-c90e-4b5e-9a02-8f8a64aef781"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Sfondo cartografico Regione Piemonte colore 3857",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_sfondo_bdtre_epsg3857.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_sfondo_bdtre_epsg3857.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:d83488c6-c90e-4b5e-9a02-8f8a64aef781"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Base cartografica di riferimento a colori",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimsbasewms/wms_sfondo_cart_rif?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimsbasewms/wms_sfondo_cart_rif?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=2754&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Base cartografica di riferimento b/n",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimsbasewms/wms_sfondo_cart_rif_bn?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimsbasewms/wms_sfondo_cart_rif_bn?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=2753&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Informazioni geodetiche e fotogrammetriche",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_geofoto?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_geofoto?request=GetCapabilities&service=WMS&version=1.3.0",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:57ab0a77-538e-4324-b67b-93a047ee8bf6"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Viabilita' e indirizzi",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_viab?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_viab?request=GetCapabilities&service=WMS&version=1.3.0",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:8b086f08-14c5-46bd-84b0-b070baf54516"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Immobili ed antropizzazioni",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_imm?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_imm?request=GetCapabilities&service=WMS&version=1.3.0",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:27901343-9649-4da4-bc4c-468ffda6a7d9"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Idrografia",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_idro?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_idro?request=GetCapabilities&service=WMS&version=1.3.0",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:c706ece5-24f0-4556-babc-6afad0280bc0"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Orografia",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_oro?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_oro?request=GetCapabilities&service=WMS&version=1.3.0",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:a5bae183-65b5-4071-aaf0-ce0535083d44"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Vegetazione",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_veg?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_veg?request=GetCapabilities&service=WMS&version=1.3.0",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:2154660c-b3c3-4738-953b-40d16a32e954"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Reti di sottoservizi",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_serv?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_serv?request=GetCapabilities&service=WMS&version=1.3.0",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:cfead55f-557b-44ea-a8c0-78c3bf88cc8e"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Localita' significative e scritte cartografiche",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_topo?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_topo?request=GetCapabilities&service=WMS&version=1.3.0",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:97df7ea1-8e87-4b37-a6fb-aa4c3664693c"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Ambiti amministrativi",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_amm?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_amm?request=GetCapabilities&service=WMS&version=1.3.0",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:84f68602-8ee1-4e25-8676-38bd97d14e78"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - Aree di pertinenza",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_pert?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimswms/bdtre_pert?request=GetCapabilities&service=WMS&version=1.3.0",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:8457300f-7656-47f5-918e-fcd3f8974374"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Limiti amministrativi",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimslimammwms/wms_limitiAmm?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimslimammwms/wms_limitiAmm?service=WMS&request=getCapabilities",
+      "urlmetadati": "www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6014&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Idrografia",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimsidrowms/wms_idro?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimsidrowms/wms_idro?service=WMS&request=getCapabilities",
+      "urlmetadati": "www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6015&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Viabilita e reti di trasporto",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/ginevra/rp-01/ngvwms/wms_ngv_1?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/ginevra/rp-01/ngvwms/wms_ngv_1?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6016&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - ALLESTIMENTO CARTOGRAFICO DI RIFERIMENTO COLORI 1:250.000  - Edizione 2018",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto250col_2018.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto250col_2018.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/it/metadata.show?uuid=r_piemon:c406bd99-bf88-48a0-a71e-c56ae67ef567"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - ALLESTIMENTO CARTOGRAFICO DI RIFERIMENTO COLORI 1:50.000  - Edizione 2018",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto50col_2018.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto50col_2018.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/it/metadata.show?uuid=r_piemon:f926b0db-e7ec-422a-a364-bd3679e93444"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - ALLESTIMENTO CARTOGRAFICO DI RIFERIMENTO B/N 1:10.000  - Edizione 2018",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto10bn_2018.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto10bn_2018.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/it/metadata.show?uuid=r_piemon:a01397cd-d151-4319-a471-a5d870090b38"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - ALLESTIMENTO CARTOGRAFICO DI RIFERIMENTO B/N 1:10.000  - Edizione 2017",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto10bn_2017.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto10bn_2017.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6466&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - ALLESTIMENTO CARTOGRAFICO DI RIFERIMENTO B/N 1:10.000  - Edizione 2016",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto10bn_2016.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto10bn_2016.xml",
+      "urlmetadati": "www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6100&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - ALLESTIMENTO CARTOGRAFICO DI RIFERIMENTO B/N 1:10.000  - Edizione 2015",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto10bn_2015.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto10bn_2015.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=4993&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "BDTRE - ALLESTIMENTO CARTOGRAFICO DI RIFERIMENTO B/N 1:10.000  - Edizione 2014",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto10bn_2014.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_basecarto10bn_2014.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=4991&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Ripresa aerea ICE 2009-2011 Ortoimmagini RGB",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimsortoregp/wms_ortoregp2010",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimsortoregp/wms_ortoregp2010?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:ec27a3da-2bd8-4f7d-8905-3ac28f488943"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Ripresa aerea ICE 2009-2011 Rilievo ombreggiato",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_ombreggiature.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_ombreggiature.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6142&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "NIR ICE 2009 - 2011",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_ortofoto_ice_nir_2010.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_ortofoto_ice_nir_2010.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:4859a508-8559-4078-a8f6-ab94671830be"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Ripresa aerea alluvione 2016 ",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_alluvione_2016.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_alluvione_2016.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:ea4187cf-20b8-4af5-83be-876be32db265"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Ortofoto AGEA 2015",
+      "url": "http://niger3.csi.it/mapproxy/service?REQUEST=GetCapabilities&service=WMS",
+      "urlcapabilities": "http://niger3.csi.it/mapproxy/service?REQUEST=GetCapabilities&service=WMS",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:0281f0a4-cdf3-4660-8418-5ef2e67d2d18"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Ortofoto 1980-1990",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_ortofoto_1980_90.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_regp_ortofoto_1980_90.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:1aeb597a-b663-4146-a049-2d0c896508fd"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Carta Tecnica Regionale storica",
+      "url": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_rp_CTR_raster.xml",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/WEBCAT/CAPABILITIES/wms_rp_CTR_raster.xml",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=5977&currTab=rndt "
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Stati Sardi",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimsstatisardiwms/CatalogoStatiSardi",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimsstatisardiwms/CatalogoStatiSardi?service=wms&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6126&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Piano Paesaggistico Regionale (PPR) - Tavola P2",
+      "url": "http://webgis.arpa.piemonte.it/ags101free/services/pianificazione/PPR_Tavola_P2_ver2017/MapServer/WMSServer?",
+      "urlcapabilities": "http://webgis.arpa.piemonte.it/ags101free/services/pianificazione/PPR_Tavola_P2_ver2017/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:505be0c7-4b8e-44a8-b1ab-723007a767d7&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Piano Paesaggistico Regionale (PPR) - Tavola P3",
+      "url": "http://webgis.arpa.piemonte.it/ags101free/services/pianificazione/PPR_Tavola_P3_ver2017/MapServer/WMSServer?",
+      "urlcapabilities": "http://webgis.arpa.piemonte.it/ags101free/services/pianificazione/PPR_Tavola_P3_ver2017/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:65f7f162-18fa-4ae5-9728-50eefc231546&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Piano Paesaggistico Regionale (PPR) - Tavola P4",
+      "url": "http://webgis.arpa.piemonte.it/ags101free/services/pianificazione/PPR_Tavola_P4_vers2017/MapServer/WMSServer?",
+      "urlcapabilities": "http://webgis.arpa.piemonte.it/ags101free/services/pianificazione/PPR_Tavola_P4_vers2017/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:6b699ef0-6089-4e5e-8f96-33cf49587f93&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Piano Paesaggistico Regionale (PPR) - Tavola P5",
+      "url": "http://webgis.arpa.piemonte.it/ags101free/services/pianificazione/PPR_Tavola_P5_ver2017/MapServer/WMSServer?",
+      "urlcapabilities": "http://webgis.arpa.piemonte.it/ags101free/services/pianificazione/PPR_Tavola_P5_ver2017/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:79068238-cb7a-414d-9cc8-40ed80dba3b0&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Piano Paesaggistico Regionale (PPR) - Tavola P6",
+      "url": "http://webgis.arpa.piemonte.it/ags101free/services/pianificazione/PPR_Tavola_P6_ver2017/MapServer/WMSServer?",
+      "urlcapabilities": "http://webgis.arpa.piemonte.it/ags101free/services/pianificazione/PPR_Tavola_P6_ver2017/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:a5f402f5-783c-4386-9a36-523a139481d5&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Consumo di Suolo",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimsbasewms/wms_cds?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/taims/rp-01/taimsbasewms/wms_cds?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=2533&currTab=rndt "
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Mosaicatura Piani Regolatori",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/urbasv/rp-01/urbawms/urba_prgc_wms",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/urbasv/rp-01/urbawms/urba_prgc_wms?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6129&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Carta dei paesaggi agrari e forestali 1:250.000",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/agrigeo/rp-01/carpaswms/wms_carpas?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/agrigeo/rp-01/carpaswms/wms_carpas?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:99e9341c-5569-4d6a-ab06-37554eb79421"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Carta dei suoli e carte derivate 1:250.000",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/agrigeo/rp-01/carpedwms/wms_carped?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/agrigeo/rp-01/carpedwms/wms_carped?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:42ebc0a1-6fc5-433b-9162-fa60322ffa8c "
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Carta dei suoli e carte derivate 1:50.000",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/agrigeo/rp-01/carsuowms/wms_carsuo?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/agrigeo/rp-01/carsuowms/wms_carsuo?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:402f9c63-d23d-4b9f-98d2-c1abcea47db5"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Fasce tampone riparie",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/agrigeo/rp-01/fascetampwms/wms_fascetamp?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/agrigeo/rp-01/fascetampwms/wms_fascetamp?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:2c2024fc-758f-4ea9-9edf-c6c378633c12&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Dissesti PAI",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/disspaiwms/wms_vtdifsuolo_dissesti_pai?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/disspaiwms/wms_vtdifsuolo_dissesti_pai?service=WMS&request=getCapabilities",
+      "urlmetadati": null
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Fasce Fluviali",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/fascpaiwms/wms_vtdifsuolo_fasce_fluviali?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/fascpaiwms/wms_vtdifsuolo_fasce_fluviali?service=WMS&request=getCapabilities",
+      "urlmetadati": null
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Aree RME",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/rmepaiwms/wms_vtdifsuolo_aree_rme?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/rmepaiwms/wms_vtdifsuolo_aree_rme?service=WMS&request=getCapabilities",
+      "urlmetadati": null
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Aree Protette",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/areeprotwms/wms_gsareprot_1?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/areeprotwms/wms_gsareprot_1?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geocatalogorp/geonetworkrp/srv/it/metadata.show?uuid=r_piemon:4368c018-6b58-4834-b233-c45360cb1206&currTab=inspire"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Piani delle aree protette",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/pianiparcwms/wms_pianideiparchi?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/pianiparcwms/wms_pianideiparchi?service=WMS&request=getCapabilities",
+      "urlmetadati": null
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Piani di gestione dei siti Rete Natura 2000",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/pianigestionewms/wms_pianigestione?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/pianigestionewms/wms_pianigestione?service=WMS&request=getCapabilities",
+      "urlmetadati": null
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Carta degli habitat (in lavorazione)",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/cartahabitatwms/wms_cartahabitat? ",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/cartahabitatwms/wms_cartahabitat?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6097&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Report Monitoraggio Direttiva Habitat (Habitat)",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/monithabitatwms/wms_monithabitat?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/monithabitatwms/wms_monithabitat?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6099&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Report Monitoraggio Direttiva Habitat (Specie)",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/monitspeciewms/wms_monitspecie?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/monitspeciewms/wms_monitspecie?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6098&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "PIT Monviso - Interreg Aqua III",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/zoneumidepocnwms/wms_zoneumidepocn?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/gsareprot/rp-01/zoneumidepocnwms/wms_zoneumidepocn?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=7000&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Carta Forestale (edizione 2016)",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/sifor/rp-01/aggcartaforwms/wms_cartafor_2016?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/sifor/rp-01/aggcartaforwms/wms_cartafor_2016?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6532&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Carta forestale e altre coperture del territorio (PFT 2000)",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/vtmonfor/rp-01/cartaforwms/wms_vtmonfor_cartafor?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/vtmonfor/rp-01/cartaforwms/wms_vtmonfor_cartafor?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=5944&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Viabilita' di interesse silvo-pastorale (PFT 2000)",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/vtmonfor/rp-01/viabforwms/wms_vtmonfor_viabfor?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/vtmonfor/rp-01/viabforwms/wms_vtmonfor_viabfor?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=2501&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Carte di attitudine alle produzioni tartufigene",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/sifor/rp-01/tartufiwms/wms_vocazione_tartufigena?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/sifor/rp-01/tartufiwms/wms_vocazione_tartufigena?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6576&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Popolamenti da seme",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/vtmonfor/rp-01/popsemewms/wms_vtmonfor_popseme?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/vtmonfor/rp-01/popsemewms/wms_vtmonfor_popseme?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geocatalogorp/geonetworkrp/srv/it/metadata.show?uuid=r_piemon:38ab6b75-d3df-4b96-b497-349dd1ccb1b8&currTab=inspire"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Piano di Sviluppo Rurale - Interventi",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/vtmonfor/rp-01/interventipsrwms/wms_vtmonfor_interventi_psr?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/vtmonfor/rp-01/interventipsrwms/wms_vtmonfor_interventi_psr?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=5935&currTab=rndt "
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Anagrafe dei soggetti ambientali - Unita' Locali Operative",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/anagamb/rp-01/ulowmspub/wms_unita_locali_operative?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/anagamb/rp-01/ulowmspub/wms_unita_locali_operative?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=2284&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Impianti autorizzati al recupero e/o smaltimento di rifiuti",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/ambpat/rp-01/rifwmspub/wms_impianti_rifiuti_autoriz?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/ambpat/rp-01/rifwmspub/wms_impianti_rifiuti_autoriz?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=2643&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Inventario emissioni in atmosfera - Puntuali (AERA ALCOTRA)",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/aera/rp-01/aerawms/wms_aera_emissioni_puntuali?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/aera/rp-01/aerawms/wms_aera_emissioni_puntuali?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=1359&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Inventario emissioni in atmosfera - Totali (AERA ALCOTRA)",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/aera/rp-01/aerawms/wms_aera_emissioni_tot?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/aera/rp-01/aerawms/wms_aera_emissioni_tot?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=1700&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Mappature acustiche",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/siradec/rp-01/siradecwms/wms_rumore?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/siradec/rp-01/siradecwms/wms_rumore?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6022&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Zonizzazione qualita' dell'aria",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/siradec/rp-01/siradecwms/wms_srrqa_zones_airquality?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/siradec/rp-01/siradecwms/wms_srrqa_zones_airquality?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6018&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Aree di superamento dei Limiti di Qualita' dell'Aria",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/siradec/rp-01/siradecwms/wms_srrqa_superamenti?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/siradec/rp-01/siradecwms/wms_srrqa_superamenti?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6019&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Incendi boschivi",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/vtmonfor/rp-01/incendiwms/wms_vtmonfor_incendi_boschivi?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/vtmonfor/rp-01/incendiwms/wms_vtmonfor_incendi_boschivi?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=5933&currTab=rndt "
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Aree Vincolate",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/sifor/rp-01/aggvincidro10kwms/wms_vincidro10k_2016?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/sifor/rp-01/aggvincidro10kwms/wms_vincidro10k_2016?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?id=6535&currTab=rndt"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Beni Vincolati",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/gsvincoli/rp-01/punvincwms/wms_benivigliano?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/gsvincoli/rp-01/punvincwms/wms_benivigliano?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geocatalogorp/geonetworkrp/srv/it/metadata.show?uuid=r_piemon:3ab77a9d-4bbe-4baf-9815-bafd60b342b8&currTab=inspire"
+    },
+    {
+      "categoria": "AIPO",
+      "nome": "Dati di base AIPo",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/siti/aipo-01/sitiwms/wms_aipo_dati_base?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/siti/aipo-01/sitiwms/wms_aipo_dati_base?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://geoportale.agenziapo.it/cms/index.php?option=com_content&view=section&layout=blog&id=6"
+    },
+    {
+      "categoria": "AIPO",
+      "nome": "Competenza AIPo",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/siti/aipo-01/sitiwms/wms_aipo_competenza_aipo?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/siti/aipo-01/sitiwms/wms_aipo_competenza_aipo?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://geoportale.agenziapo.it/cms/index.php?option=com_content&view=section&layout=blog&id=6"
+    },
+    {
+      "categoria": "AIPO",
+      "nome": "Aree protette",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/siti/aipo-01/sitiwms/wms_aipo_aree_protette?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/siti/aipo-01/sitiwms/wms_aipo_aree_protette?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://geoportale.agenziapo.it/cms/index.php?option=com_content&view=section&layout=blog&id=6"
+    },
+    {
+      "categoria": "AIPO",
+      "nome": "Fasce Fluviali",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/siti/aipo-01/sitiwms/wms_aipo_fasce?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/siti/aipo-01/sitiwms/wms_aipo_fasce?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://geoportale.agenziapo.it/cms/index.php?option=com_content&view=section&layout=blog&id=6"
+    },
+    {
+      "categoria": "Arpa Piemonte",
+      "nome": "BDGeo100 - Aree inondabili",
+      "url": "http://webgis.arpa.piemonte.it/ags101free/services/geologia_e_dissesto/BDGeo100_Aree_inondabili/MapServer/WMSServer?",
+      "urlcapabilities": "http://webgis.arpa.piemonte.it/ags101free/services/geologia_e_dissesto/BDGeo100_Aree_inondabili/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+      "urlmetadati": "http://webgis.arpa.piemonte.it/geoportalserver_arpa/catalog/search/resource/details.page?uuid=ARLPA_TO%3A07.03.01_ai-D_2013-10-08%3A14%3A38&title=Arpa%20Piemonte%20-%20BDGeo100%20-%20Aree%20inondabili"
+    },
+    {
+      "categoria": "Arpa Piemonte",
+      "nome": "BDGeo100 - Danni ai centri abitati",
+      "url": "http://webgis.arpa.piemonte.it/ags101free/services/geologia_e_dissesto/BDGeo100_Danni_centri_abitati/MapServer/WMSServer?",
+      "urlcapabilities": "http://webgis.arpa.piemonte.it/ags101free/services/geologia_e_dissesto/BDGeo100_Danni_centri_abitati/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+      "urlmetadati": "http://webgis.arpa.piemonte.it/geoportalserver_arpa/catalog/search/resource/details.page?uuid=ARLPA_TO%3A07-03-01_d_ca-D_2013-11-18%3A17%3A00&title=Arpa%20Piemonte%20-%20BDGeo100%20-%20Danni%20ai%20ce"
+    },
+    {
+      "categoria": "Arpa Piemonte",
+      "nome": "BDGeo100 - Litologia",
+      "url": "http://webgis.arpa.piemonte.it/ags101free/services/geologia_e_dissesto/BDGeo100_Litologia/MapServer/WMSServer?",
+      "urlcapabilities": "http://webgis.arpa.piemonte.it/ags101free/services/geologia_e_dissesto/BDGeo100_Litologia/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+      "urlmetadati": "http://webgis.arpa.piemonte.it/geoportalserver_arpa/catalog/search/resource/details.page?uuid=ARLPA_TO%3A07.02.06-D_2011-06-27%3A15%3A23&title=Arpa%20Piemonte%20-%20BDGeo100%20-%20Litologia"
+    },
+    {
+      "categoria": "Arpa Piemonte",
+      "nome": "Sistema di Rilevamento Regionale della Qualita' dell'Aria (SRRQA)",
+      "url": "http://webgis.arpa.piemonte.it/ags101free/services/aria/Sistema_rilevamento_regionale_qualita_aria/MapServer/WMSServer",
+      "urlcapabilities": "http://webgis.arpa.piemonte.it/ags101free/services/aria/Sistema_rilevamento_regionale_qualita_aria/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+      "urlmetadati": "http://webgis.arpa.piemonte.it/geoportalserver_arpa/catalog/search/resource/details.page?uuid=ARLPA_TO%3A04.01.03-D_2014-09-19-14%3A45&title=Arpa%20Piemonte%20-%20Sistema%20di%20Rilevamento%20Regional"
+    },
+    {
+      "categoria": "Arpa Piemonte",
+      "nome": "Sistema Informativo Valanghe - SIVa",
+      "url": "http://webgis.arpa.piemonte.it/ags101free/services/geologia_e_dissesto/Valanghe_10000_siva/MapServer/WMSServer?",
+      "urlcapabilities": "http://webgis.arpa.piemonte.it/ags101free/services/geologia_e_dissesto/Valanghe_10000_siva/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+      "urlmetadati": "http://webgis.arpa.piemonte.it/geoportalserver_arpa/catalog/search/resource/details.page?uuid=ARLPA_TO%3A07.07.01-D_2011-05-11-15%3A50&title=Arpa%20Piemonte%20-%20Sistema%20Informativo%20Valanghe%20-%"
+    },
+    {
+      "categoria": "Arpa Piemonte",
+      "nome": "Zone di allertamento per il rischio idrogeologico e idraulico",
+      "url": "http://webgis.arpa.piemonte.it/ags101free/services/meteorologia_clima/Zone_allerta_rischio_idrogeol_idraulico/MapServer/WMSServer?",
+      "urlcapabilities": "http://webgis.arpa.piemonte.it/ags101free/services/meteorologia_clima/Zone_allerta_rischio_idrogeol_idraulico/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+      "urlmetadati": "http://webgis.arpa.piemonte.it/geoportalserver_arpa/catalog/search/resource/details.page?uuid=ARLPA_TO%3A04.02.04-D_2012-10-18-10%3A14&title=Arpa%20Piemonte%20-%20Zone%20di%20allertamento%20per%20il%2"
+    },
+    {
+      "categoria": "Arpa Piemonte",
+      "nome": "Zone Umide del Piemonte",
+      "url": "http://marcopolo.arpa.piemonte.it/ags101free/services/ecosistemi_biodiversita/Censimento_Zone_Umide/MapServer/WmsServer?",
+      "urlcapabilities": "http://marcopolo.arpa.piemonte.it/ags101free/services/ecosistemi_biodiversita/Censimento_Zone_Umide/MapServer/WmsServer?request=GetCapabilities&service=WMS",
+      "urlmetadati": "http://webgis.arpa.piemonte.it/geoportalserver_arpa/catalog/search/resource/details.page?uuid=ARLPA_TO%3A06.01.02-D_2011-02-22-14%3A35&title=Arpa%20Piemonte%20-%20Zone%20Umide%20del%20Piemonte"
+    },
+    {
+      "categoria": "Arpa Piemonte",
+      "nome": "Bacini idrografici",
+      "url": "http://webgis.arpa.piemonte.it/ags101free/services/acqua/Bacini_idrografici/MapServer/WMSServer?",
+      "urlcapabilities": "http://webgis.arpa.piemonte.it/ags101free/services/acqua/Bacini_idrografici/MapServer/WMSServer?request=GetCapabilities&version=1.3.0&service=WMS",
+      "urlmetadati": "http://webgis.arpa.piemonte.it/geoportalserver_arpa/catalog/search/resource/details.page?uuid=ARLPA_TO%3A12.01.01-D_2011-06-21-11%3A30&title=Arpa%20Piemonte%20-%20Bacini%20idrografici"
+    },
+    {
+      "categoria": "Geoportale nazionale",
+      "nome": "Cartografia di base - IGM 25.000",
+      "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/IGM_25000.map",
+      "urlcapabilities": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/IGM_25000.map&service=wms&request=getCapabilities",
+      "urlmetadati": "http://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={88E7BCB9-F61D-48EF-A7B7-8CC7B4695D29}"
+    },
+    {
+      "categoria": "Geoportale nazionale",
+      "nome": "Ortofoto a colori Maggio 2008 (alluvione Piemonte) con relative date del volo",
+      "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_alluvione_piemonte.map",
+      "urlcapabilities": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_alluvione_piemonte.map&service=wms&request=getCapabilities",
+      "urlmetadati": "http://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={EF00C2C3-8CF1-4DB0-8432-F8EC6F8127A6}"
+    },
+    {
+      "categoria": "Geoportale nazionale",
+      "nome": "Ortofoto a colori anno 2006 con relative date del volo",
+      "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map",
+      "urlcapabilities": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&service=wms&request=getCapabilities",
+      "urlmetadati": "http://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={4B4883A2-668A-4D69-AE7F-1C54A9E5E09D}"
+    },
+    {
+      "categoria": "Geoportale nazionale",
+      "nome": "Ortofoto a colori anno 2000 con relative date del volo",
+      "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_00.map",
+      "urlcapabilities": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_00.map&service=wms&request=getCapabilities",
+      "urlmetadati": "http://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={C29A086C-6D2C-4965-BE6C-435B1D468483}"
+    },
+    {
+      "categoria": "Geoportale nazionale",
+      "nome": "Ortofoto in bianco e nero anno 1994-1996 con relative date del volo",
+      "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_bn_94.map",
+      "urlcapabilities": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_bn_94.map&service=wms&request=getCapabilities",
+      "urlmetadati": "http://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={842D30E1-7115-4E6A-AA4C-2AEED6E2FD67}"
+    },
+    {
+      "categoria": "Geoportale nazionale",
+      "nome": "Ortofoto in bianco e nero anni 1988-1989 con relative date del volo",
+      "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_bn_88.map",
+      "urlcapabilities": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_bn_88.map&service=wms&request=getCapabilities",
+      "urlmetadati": "http://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={EF776D97-B45C-44D8-B5CC-9EDF63F366C0}"
+    },
+    {
+      "categoria": "Geoportale nazionale",
+      "nome": "Uso del suolo - Corine Land Cover anno 2000",
+      "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/Vettoriali/Corine_Land_Cover2000.map",
+      "urlcapabilities": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/Vettoriali/Corine_Land_Cover2000.map&service=wms&request=getCapabilities",
+      "urlmetadati": "http://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={FFAB1A27-389D-42F4-8254-A888518F5943}"
+    },
+    {
+      "categoria": "Geoportale nazionale",
+      "nome": "Uso del suolo - Corine Land Cover anno 2006",
+      "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/Vettoriali/Corine_Land_Cover2006.map",
+      "urlcapabilities": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/Vettoriali/Corine_Land_Cover2006.map&service=wms&request=getCapabilities",
+      "urlmetadati": "http://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={B732C796-4926-4545-AA98-0B4E7E6BFE99}"
+    },
+    {
+      "categoria": "Geoportale nazionale",
+      "nome": "Classificazione sismica dei comuni italiani al 2012",
+      "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/Vettoriali/Classificazione_sismica_2012.map",
+      "urlcapabilities": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/Vettoriali/Classificazione_sismica_2012.map&service=wms&request=getCapabilities",
+      "urlmetadati": "http://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={B8D5BFEA-94B4-49F1-8B93-7AD64E5BBB63}"
+    },
+    {
+      "categoria": "Geoportale nazionale",
+      "nome": "Ortofoto a colori anno 2009-2012 con relative date volo",
+      "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map",
+      "urlcapabilities": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&service=wms&request=getCapabilities",
+      "urlmetadati": "http://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={EB921E09-D2DA-4878-9842-E4FC3A138F7C}"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Aree di ricarica dell'acquifero profondo - scala 1:250000",
+      "url": "http://gisserver.territorio.csi.it/geoserver/decsiraogc_areeprotezione_pta/wms?",
+      "urlcapabilities": "http://gisserver.territorio.csi.it/geoserver/decsiraogc_areeprotezione_pta/wms?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/it/metadata.show?uuid=r_piemon:3fcae3ad-cf09-438d-99d7-a432b5b5c57f\r\n"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "COMMERCIO - Carburanti",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/geocomm/rp-01/geocommwms/wms_carburanti?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/geocomm/rp-01/geocommwms/wms_carburanti?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/it/metadata.show?uuid=r_piemon:b1bad847-e636-4bc5-a265-0d120a1642b8"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "COMMERCIO - Manifestazioni Fieristiche",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/geocomm/rp-01/geocommwms/wms_fiere?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/geocomm/rp-01/geocommwms/wms_fiere?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/it/metadata.show?uuid=r_piemon:21af99b4-dbe2-4610-a3de-0ad1c57e03ac"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "COMMERCIO - Rete distributiva del commercio ",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/geocomm/rp-01/geocommwms/wms_rete_distributiva?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/geocomm/rp-01/geocommwms/wms_rete_distributiva?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/it/metadata.show?uuid=r_piemon:3a1d0760-46a9-4207-95c1-02603fd156ca"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "COMMERCIO - Zone di insediamento e criteri commerciali",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/geocomm/rp-01/geocommwms/wms_insediamento_comm?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/geocomm/rp-01/geocommwms/wms_insediamento_comm?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/it/metadata.show?uuid=r_piemon:5b98a71e-cafb-4a2a-8637-f2d57a610f41"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "PGRA - Piano Gestione Rischio Alluvioni",
+      "url": "http://osgis2.csi.it/cgi-bin/qgis_mapserv.fcgi?map=/appserv/prj/qgis_cloud/direttiva_alluvioni.qgs",
+      "urlcapabilities": "http://osgis2.csi.it/cgi-bin/qgis_mapserv.fcgi?map=/appserv/prj/qgis_cloud/direttiva_alluvioni.qgs?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:1928a8fd-eacd-4b89-8342-a40c802d49d4"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "SICOD",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/sicodwms/wms_disu_sicod?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/sicodwms/wms_disu_sicod?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:ec1af289-6ca5-44c7-9588-df8dbdac6122"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Catasto sbarramenti",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/dinvwms/wms_disu_dinv?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/dinvwms/wms_disu_dinv?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:2bd153af-6587-42f7-9745-1a7792753ce7"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Carte di sintesi dei PRG",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/sintesiwms/wms_disu_sintesi?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/sintesiwms/wms_disu_sintesi?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:01629dce-58b0-4438-91c3-2f2725062289"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Fotointerpretazione",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/fotointwms/wms_disu_fotoint?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/fotointwms/wms_disu_fotoint?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:802e2220-8346-4ea5-bb4d-001b2a81e3be"
+    },
+    {
+      "categoria": "Regione Piemonte",
+      "nome": "Eventi alluvionali",
+      "url": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/temidifswms/wms_disu_temidifs?",
+      "urlcapabilities": "http://geomap.reteunitaria.piemonte.it/ws/vtdifsuolo/rp-01/temidifswms/wms_disu_temidifs?service=WMS&request=getCapabilities",
+      "urlmetadati": "http://www.geoportale.piemonte.it/geonetworkrp/srv/ita/metadata.show?uuid=r_piemon:33473877-2f42-43a0-bf6f-77e30afbf560"
+    }
+  ],
+  "postgis": [],
+  "raster": [],
+  "progetto": [],
+  "indica": [],
+  "indirizziweb": []
+}}
