@@ -52,18 +52,22 @@ from newconnectiondialog import NewConnectionDialog
 from aboutdialog import AboutDialog
 
 PROJECT_NAME = "CSIAtlante"
-LOGGER_NAME = 'CSIAtlante.csiatlante'
-# LOGGER = csiutils.Logger(LOGGER_NAME)
+MAIN_MODULE_NAME = "csiatlante"
+FOLDER_NAME = __name__.split('.')[0]
+MODULE_NAME = __name__.split('.')[1]
+MAIN_MODULE = "%s.%s" % (FOLDER_NAME, MAIN_MODULE_NAME)
+LOGGER_NAME = MAIN_MODULE
+LOGGER = logging.getLogger()
 
-if __name__ == 'CSIAtlante.csiatlantedialog':
-    try:
-        module = __import__("CSIAtlante.csiatlante")
-        class_logger = getattr(module, "csiLogger")
-        LOGGER = class_logger(LOGGER_NAME)
-        LOGGER.debug('### CsiAtlanteDialog logger from CSIAtlante.csiatlante.csiLogger')
-    except Exception, ex:
-        LOGGER = logging.getLogger()
-        LOGGER.debug('### CsiAtlanteDialog logging.getLogger()')
+try:
+	module = __import__(MAIN_MODULE)
+	class_logger = getattr(module, "csiLogger")
+	LOGGER = class_logger(LOGGER_NAME)
+	LOGGER.debug('### CsiAtlanteDialog logger from CSIAtlante.csiatlante.csiLogger')
+except Exception, ex:
+	LOGGER = logging.getLogger()
+	LOGGER.debug('### CsiAtlanteDialog logging.getLogger()')
+
 # -----------------------------------------------------------------------------
 # Porta di servizio per remote debug in Eclipse
 s = QSettings()

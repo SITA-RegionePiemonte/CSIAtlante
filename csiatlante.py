@@ -70,25 +70,32 @@ import tempfile
 from postgis_utils import CSIPostGisDBConnector
 
 PROJECT_NAME = "CSIAtlante"
+MAIN_MODULE_NAME = "csiatlante"
+FOLDER_NAME = __name__.split('.')[0]
+MODULE_NAME = __name__.split('.')[1]
+MAIN_MODULE = "%s.%s" % (FOLDER_NAME, MAIN_MODULE_NAME)
+LOGGER_NAME = MAIN_MODULE
+LOGGER = logging.getLogger()
 
 #LOG_PATH = ''.join([str(QFileInfo(os.path.realpath(__file__)).path()), '/logs'])
 LOG_PATH = ''.join([tempfile.gettempdir(), '/CSI'])  # c:\users\xxx\appdata\local\temp\CSI
 LOG_FILENAME = ''.join([LOG_PATH, '/', 'csiatlante.log'])
-LOGGER_NAME = __name__   # 'CSIAtlante.csiatlante'
 
-if __name__ == 'CSIAtlante.csiatlante':
-    try:
-        for name, data in inspect.getmembers("CSIAtlante.csiatlante", inspect.isclass):
-            if (name == "csiLogger"):
-                QMessageBox.information(None, "inspect CSIAtlante.csiatlante", "trovata class csiLogger")
+msg = "LOG_FILENAME: %s" % (LOG_FILENAME)
+QgsMessageLog.logMessage(msg, 'CSI Atlante')
 
-        module = __import__("CSIAtlante.csiatlante")
-        class_logger = getattr(module, "csiLogger")
-        LOGGER = class_logger(LOGGER_NAME)
-    except Exception, ex:
-        LOGGER = logging.getLogger()
-        LOGGER.setLevel(logging.DEBUG)
-        LOGGER.debug("!!! Exception in try to import class: csiLogger !!!")
+try:
+	for name, data in inspect.getmembers(MAIN_MODULE, inspect.isclass):
+		if (name == "csiLogger"):
+			QMessageBox.information(None, "inspect CSIAtlante.csiatlante", "trovata class csiLogger")
+
+	module = __import__(MAIN_MODULE)
+	class_logger = getattr(module, "csiLogger")
+	LOGGER = class_logger(LOGGER_NAME)
+except Exception, ex:
+	LOGGER = logging.getLogger()
+	LOGGER.setLevel(logging.DEBUG)
+	LOGGER.debug("!!! Exception in try to import class: csiLogger !!!")
 
 # -----------------------------------------------------------------------------
 # Porta di servizio per remote debug in Eclipse
@@ -647,6 +654,8 @@ class CsiAtlantePlugin(QObject):
                 tab = "raster"
             elif self.dlg.ui.tabWidget.currentWidget() == self.dlg.ui.tabWMS:
                 tab = "geoservizi"
+            elif self.dlg.ui.tabWidget.currentWidget() == self.dlg.ui.tabConf:
+                tab = "conf"
             else:
                 tab = "unknown"
 
@@ -965,14 +974,16 @@ class CsiAtlantePlugin(QObject):
             else:
                 LOGGER.debug("schede_visibili :: NON esiste flg_vector --> si tratta di servizio vecchio OSGIS! oppure RETE assente!")
                 QMessageBox.information(None, "schede_visibili",
-                                        "Attenzione!\n\nSi sta utilizzando un servizio non compatibile con questa versione di plugin: \
-                                        \n\nplugin: CSIAtlante %s \nservizio: %s \n\nVerificare nel tab 'Impostazioni' il servizio in uso\
-                                        \n\nPer informazioni contattare: cartografia@csi.it" % (self.version, url))
+                                        "Attenzione!\n\n\
+										Problema di rete oppure servizio non compatibile con questa versione di plugin:\n\
+										CSIAtlante %s\n\n\
+										Verificare nel tab 'Impostazioni' il servizio in uso\n\
+										servizio: %s \n\n" % (self.version, url))
                 jsonObj = {
-                            'flg_vector': 1,
+                            'flg_vector': 0,
                             'flg_progetti': 0,
                             'flg_raster': 0,
-                            'flg_wms': 0,
+                            'flg_wms': 1,
                             'flg_tms': 0,
                             'flg_wfs': 0,
                             'flg_indica': 0,

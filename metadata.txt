@@ -3,7 +3,7 @@
 name=CSI Atlante
 qgisMinimumVersion=2.0
 description=Accesso organizzato a dati e geoservizi
-version=2.0.07
+version=2.0.08
 author=Enzo Ciarmoli
 email=supporto.gis@csi.it
 ; end of mandatory metadata
@@ -14,6 +14,7 @@ email=supporto.gis@csi.it
 category=Plugin
 
 changelog=
+    2.0.08 : fix logger dipendente da modulo main
     2.0.07 : wms cacheFile: solo nome e cartella cache unica
     2.0.06 : sga tools: chart georiferiti
     2.0.05 : ottimizzazioni indicatori jira
