@@ -31,11 +31,14 @@
  ***************************************************************************/
 """
 
-from qgis.core import QgsMessageLog
+from qgis.core import Qgis, QgsMessageLog
+from qgis.core import QgsMapLayer
 from qgis.gui import QgsMapToolIdentify
 from qgis.PyQt import QtCore, QtWidgets
 from qgis.PyQt.QtCore import QSettings
 from qgis.PyQt.QtWidgets import QMessageBox
+
+from qgis.PyQt.QtGui import QCursor, QPixmap
 
 from .graphidentifydialog import GraphIdentifyDialog
 
@@ -149,7 +152,7 @@ class GraphMapToolIdentify(QgsMapToolIdentify):
             xp = point.x()
             yp = point.y()
             #QMessageBox.information(None, "sgatools", "canvasReleaseEvent...\n%s\n%s" % (str(xp), str(yp)))
-            QgsMessageLog.logMessage('sgatools::GraphMapToolIdentify::canvasReleaseEvent: point x: %s  y: %s' % (str(xp), str(yp)), LOGGER_TAG, QgsMessageLog.INFO)
+            QgsMessageLog.logMessage('sgatools::GraphMapToolIdentify::canvasReleaseEvent: point x: %s  y: %s' % (str(xp), str(yp)), LOGGER_TAG, Qgis.Info)
 
             """QList< IdentifyResult > List of QgsMapToolIdentify::IdentifyResult
             results = self.identify(e.x(), e.y(), mylayerList, mode)
@@ -177,7 +180,7 @@ class GraphMapToolIdentify(QgsMapToolIdentify):
                 pass
             else:
                 QMessageBox.information(None, "sgatools", "Il layer attivo non e' di tipo serie storica!: \n%s" % (current_layer.name()))
-                QgsMessageLog.logMessage("sgatools::canvasReleaseEvent: Il layer attivo non e' di tipo serie storica!: %s" % (current_layer.name()), LOGGER_TAG, QgsMessageLog.INFO)
+                QgsMessageLog.logMessage("sgatools::canvasReleaseEvent: Il layer attivo non e' di tipo serie storica!: %s" % (current_layer.name()), LOGGER_TAG, Qgis.Info)
                 return
 
             self.dimensione = current_layer.customProperty("sga/dimensione", "")
@@ -227,7 +230,7 @@ class GraphMapToolIdentify(QgsMapToolIdentify):
 
             if len(identify_result) == 0:
                 self.iface.mainWindow().statusBar().showMessage("No features at this position found.")
-                QgsMessageLog.logMessage('len(identify_result) == 0', LOGGER_TAG, QgsMessageLog.INFO)
+                QgsMessageLog.logMessage('len(identify_result) == 0', LOGGER_TAG, Qgis.Info)
 
             else:
                 feature = identify_result[0].mFeature
@@ -255,12 +258,12 @@ class GraphMapToolIdentify(QgsMapToolIdentify):
                         LOGGER.debug("self.denominazioneunita : %s" % (self.denominazioneunita))
                 # ---------------------------------------------------------------------------------
                 for v in values_array:
-                    QgsMessageLog.logMessage('values: %s %s' % (v['x'], v['y']), LOGGER_TAG, QgsMessageLog.INFO)
+                    QgsMessageLog.logMessage('values: %s %s' % (v['x'], v['y']), LOGGER_TAG, Qgis.Info)
 
 #                 values_sorted_array = sorted(values_array, key=itemgetter('x'))
 #
 #                 for v in values_sorted_array:
-#                     QgsMessageLog.logMessage('values_sorted: %s %s' % (v['x'], v['y']), LOGGER_TAG, QgsMessageLog.INFO)
+#                     QgsMessageLog.logMessage('values_sorted: %s %s' % (v['x'], v['y']), LOGGER_TAG, Qgis.Info)
 
                 blob_array = list()
 
@@ -310,9 +313,9 @@ class GraphMapToolIdentify(QgsMapToolIdentify):
                 try:
                     self.identify_dialog.browser.navigate('POST', self.url, data_dict)
                 except Exception as ex:
-                    QgsMessageLog.logMessage('identify_dialog.browser.navigate: %s' % str(ex), LOGGER_TAG, QgsMessageLog.INFO)
+                    QgsMessageLog.logMessage('identify_dialog.browser.navigate: %s' % str(ex), LOGGER_TAG, Qgis.Info)
                 finally:
-                    QgsMessageLog.logMessage('identify_dialog.browser.navigate: finally', LOGGER_TAG, QgsMessageLog.INFO)
+                    QgsMessageLog.logMessage('identify_dialog.browser.navigate: finally', LOGGER_TAG, Qgis.Info)
                     self.identify_dialog.show()  # show() for non-modal dialog
 
         except Exception as ex:
@@ -332,7 +335,7 @@ class GraphMapToolIdentify(QgsMapToolIdentify):
     def dirty_work_harcoded(self):
         """
         """
-        QgsMessageLog.logMessage('GraphMapToolIdentify::dirty_work: start', LOGGER_TAG, QgsMessageLog.INFO)
+        QgsMessageLog.logMessage('GraphMapToolIdentify::dirty_work: start', LOGGER_TAG, Qgis.Info)
 
         # ---------------------------------------------------------------------------------------
         blob_array = list()
@@ -429,11 +432,11 @@ class GraphMapToolIdentify(QgsMapToolIdentify):
             self.identify_dialog.browser.navigate('POST', self.url, data_dict)
 
         except Exception as ex:
-            QgsMessageLog.logMessage('GraphMapToolIdentify::dirty_work:: %s' % str(ex), LOGGER_TAG, QgsMessageLog.INFO)
+            QgsMessageLog.logMessage('GraphMapToolIdentify::dirty_work:: %s' % str(ex), LOGGER_TAG, Qgis.Info)
         finally:
-            QgsMessageLog.logMessage('GraphMapToolIdentify::dirty_work: finally', LOGGER_TAG, QgsMessageLog.INFO)
+            QgsMessageLog.logMessage('GraphMapToolIdentify::dirty_work: finally', LOGGER_TAG, Qgis.Info)
             self.identify_dialog.show()
-        QgsMessageLog.logMessage('GraphMapToolIdentify::dirty_work: end', LOGGER_TAG, QgsMessageLog.INFO)
+        QgsMessageLog.logMessage('GraphMapToolIdentify::dirty_work: end', LOGGER_TAG, Qgis.Info)
 
 
 
@@ -491,7 +494,7 @@ class ChartMapToolIdentify(QgsMapToolIdentify):
             point = self.toMapCoordinates(e.pos())
             xp = point.x()
             yp = point.y()
-            QgsMessageLog.logMessage('sgatools::ChartMapToolIdentify::canvasReleaseEvent: point x: %s  y: %s' % (str(xp), str(yp)), LOGGER_TAG, QgsMessageLog.INFO)
+            QgsMessageLog.logMessage('sgatools::ChartMapToolIdentify::canvasReleaseEvent: point x: %s  y: %s' % (str(xp), str(yp)), LOGGER_TAG, Qgis.Info)
 
             seriestoricalayerlist = self.getSerieStoricaLayerList()
             current_layer = self.iface.mapCanvas().currentLayer()
@@ -504,7 +507,7 @@ class ChartMapToolIdentify(QgsMapToolIdentify):
                 pass
             else:
                 QMessageBox.information(None, "sgatools", "Il layer attivo non e' di tipo serie storica!: \n%s" % (current_layer.name()))
-                QgsMessageLog.logMessage("sgatools::canvasReleaseEvent: Il layer attivo non e' di tipo serie storica!: %s" % (current_layer.name()), LOGGER_TAG, QgsMessageLog.INFO)
+                QgsMessageLog.logMessage("sgatools::canvasReleaseEvent: Il layer attivo non e' di tipo serie storica!: %s" % (current_layer.name()), LOGGER_TAG, Qgis.Info)
                 return
 
             self.dimensione = current_layer.customProperty("sga/dimensione", "")
@@ -553,7 +556,7 @@ class ChartMapToolIdentify(QgsMapToolIdentify):
 
             if len(identify_result) == 0:
                 self.iface.mainWindow().statusBar().showMessage("No features at this position found.")
-                QgsMessageLog.logMessage('len(identify_result) == 0', LOGGER_TAG, QgsMessageLog.INFO)
+                QgsMessageLog.logMessage('len(identify_result) == 0', LOGGER_TAG, Qgis.Info)
 
             else:
                 feature = identify_result[0].mFeature
@@ -581,12 +584,12 @@ class ChartMapToolIdentify(QgsMapToolIdentify):
                         LOGGER.debug("self.denominazioneunita : %s" % (self.denominazioneunita))
                 # ---------------------------------------------------------------------------------
                 for v in values_array:
-                    QgsMessageLog.logMessage('values: %s %s' % (v['x'], v['y']), LOGGER_TAG, QgsMessageLog.INFO)
+                    QgsMessageLog.logMessage('values: %s %s' % (v['x'], v['y']), LOGGER_TAG, Qgis.Info)
 
 #                 values_sorted_array = sorted(values_array, key=itemgetter('x'))
 #
 #                 for v in values_sorted_array:
-#                     QgsMessageLog.logMessage('values_sorted: %s %s' % (v['x'], v['y']), LOGGER_TAG, QgsMessageLog.INFO)
+#                     QgsMessageLog.logMessage('values_sorted: %s %s' % (v['x'], v['y']), LOGGER_TAG, Qgis.Info)
 
                 #title = "%s %s - %s" % (self.indicatore.encode("utf-8"), self.dimensione.encode("utf-8"), self.unita.encode("utf-8"))
                 title = "%s %s - %s" % (self.indicatore.encode("utf-8"), self.dimensione.encode("utf-8"), self.denominazioneunita.encode("utf-8"))
@@ -605,7 +608,7 @@ class ChartMapToolIdentify(QgsMapToolIdentify):
                     i = i + 1
                     key_name = "key%d" % (i)
                     val_name = "val%d" % (i)
-                    QgsMessageLog.logMessage('%s=%s %s=%s' % (key_name, v['x'], val_name, v['y']), LOGGER_TAG, QgsMessageLog.INFO)
+                    QgsMessageLog.logMessage('%s=%s %s=%s' % (key_name, v['x'], val_name, v['y']), LOGGER_TAG, Qgis.Info)
                     query_args[key_name] = v['x']
                     query_args[val_name] = v['y']
 
