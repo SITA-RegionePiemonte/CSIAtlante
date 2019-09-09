@@ -81,17 +81,24 @@ import urllib.request, urllib.parse, urllib.error
 import json
 import threading
 import time
-import tempfile
 from .postgis_utils import CSIPostGisDBConnector
+
+import tempfile
+import shutil
+
+import inspect
+import importlib
+import sys
 
 PROJECT_NAME = "CSIAtlante"
 MAIN_MODULE_NAME = "csiatlante"
 FOLDER_NAME = __name__.split('.')[0]
 MODULE_NAME = __name__.split('.')[1]
-MAIN_MODULE = "%s.%s" % (FOLDER_NAME, MAIN_MODULE_NAME)
-LOGGER_NAME = MAIN_MODULE
+#MAIN_MODULE = "%s.%s" % (FOLDER_NAME, MAIN_MODULE_NAME)
+MAIN_MODULE = sys.modules[__name__]
+LOGGER_NAME = "%s.%s" % (FOLDER_NAME, MAIN_MODULE_NAME)
 LOGGER = logging.getLogger()
-
+LOGGER_TAG = "CSIAtlante"
 #LOG_PATH = ''.join([str(QFileInfo(os.path.realpath(__file__)).path()), '/logs'])
 LOG_PATH = ''.join([tempfile.gettempdir(), '/CSI'])  # c:\users\xxx\appdata\local\temp\CSI
 LOG_FILENAME = ''.join([LOG_PATH, '/', 'csiatlante.log'])
@@ -99,19 +106,37 @@ LOG_FILENAME = ''.join([LOG_PATH, '/', 'csiatlante.log'])
 msg = "LOG_FILENAME: %s" % (LOG_FILENAME)
 QgsMessageLog.logMessage(msg, 'CSI Atlante')
 
-try:
-    for name, data in inspect.getmembers(MAIN_MODULE, inspect.isclass):
-        if (name == "csiLogger"):
-            #QMessageBox.information(None, "inspect %s" % (MAIN_MODULE), "trovata class csiLogger")
-            LOGGER.debug("### CsiAtlanteDialog inspect %s - found: %s" % (MAIN_MODULE, name))
 
-    module = __import__(MAIN_MODULE)
-    class_logger = getattr(module, "csiLogger")
-    LOGGER = class_logger(LOGGER_NAME)
-except Exception as ex:
-    LOGGER = logging.getLogger()
-    LOGGER.setLevel(logging.DEBUG)
-    LOGGER.debug("!!! Exception in try to import class: csiLogger !!!")
+# To import a Python source file directly, use the following recipe (Python 3.5 and newer only)
+# https://docs.python.org/3/library/importlib.html#importing-a-source-file-directly
+
+LOGGER = logging.getLogger()
+LOGGER.setLevel(logging.DEBUG)
+# try:
+    # LOGGER.debug("MAIN_MODULE: %s" % (MAIN_MODULE))
+    
+    # #current_module = MAIN_MODULE
+    # #for key in dir(current_module):
+    # #    if isinstance( getattr(current_module, key), class ):
+    # #        LOGGER.debug("key: %s" % (key))
+    
+    # #**********moduleobj = importlib.import_module(MAIN_MODULE)
+    # #**********for name, obj in inspect.getmembers(moduleobj, inspect.isclass):
+
+    # for name, data in inspect.getmembers(MAIN_MODULE, inspect.isclass):
+        # LOGGER.debug("inspect.getmembers ... name: %s repr(data): %s" % (name, repr(data)))
+        
+        # if (name == "csiLogger"):
+            # #QMessageBox.information(None, "inspect %s" % (MAIN_MODULE), "trovata class csiLogger")
+            # LOGGER.debug("### CsiAtlanteDialog inspect %s - found: %s" % (MAIN_MODULE, name))
+
+    # module = __import__(MAIN_MODULE)
+    # class_logger = getattr(module, "csiLogger")
+    # LOGGER = class_logger(LOGGER_NAME)
+# except Exception as ex:
+    # LOGGER = logging.getLogger()
+    # LOGGER.setLevel(logging.DEBUG)
+    # LOGGER.debug("!!! Exception in try to import class: csiLogger !!!")
 
 # -----------------------------------------------------------------------------
 # Porta di servizio per remote debug in Eclipse
@@ -351,6 +376,7 @@ class CsiAtlantePlugin(QObject):
         # Initialize singleton Logger and keep reference
         self.logger = csiLogger(LOGGER_NAME)
         LOGGER = self.logger
+        #iface.messageBar().pushMessage("CsiAtlantePlugin init", "LOGGER_NAME: %s" % (LOGGER_NAME), level=Qgis.Critical)
 
         # Save reference to the QGIS interface
         self.iface = iface
@@ -1594,6 +1620,7 @@ class PROJECTInfo:
             #2to3 encoded_args = urllib.urlencode(query_args)
             encoded_args = urllib.parse.urlencode(query_args)
             #2to3 filehandle = urllib2.urlopen(url, encoded_args)
+            # TODO: urllib.request.urlopen(BYTES)
             filehandle = urllib.urlopen(url, encoded_args)
 
             lines = csiutils.RemoveCR(filehandle.readlines())
@@ -1622,7 +1649,7 @@ class POSTGISInfo(object):
     """
     Classe di gestione del dato postgis
     """
-    # def __init__(self, iface):
+    #def __init__(self, iface):
     def __init__(self):
         self.category = ''
         self.category_backup = ''
@@ -1720,8 +1747,8 @@ class POSTGISInfo(object):
         # qgis3: QgsLegendInterface was removed. It was replaced by layer tree API (QgsLayerTreeNode class and others)
         #2to3 legend = iface.legendInterface()
 
-        pwdCoax = self.getPasswordCoax(self.host, self.porta, self.dbname, self.utente)
-        if pwdCoax == None:
+        pwdCoax = self.getPasswordCoax(iface, self.host, self.porta, self.dbname, self.utente)
+        if pwdCoax == None or pwdCoax == "":
             QMessageBox.information(None, "Dato non caricato", "Dato non caricato:\n%s" % (self.nome))
         else:
             # caricamento del vector layer
@@ -1737,8 +1764,8 @@ class POSTGISInfo(object):
                 La connessione al DB deve avvenire con le credenziali di utente
                 Il caricamento del vector layer avviene con le credenziali dello schema
                 """
-                msg = "pwdCoax = %s" % (pwdCoax)
-                iface.messageBar().pushMessage("2to3", msg, level=Qgis.Info)
+                #msg = "pwdCoax = %s" % (pwdCoax)
+                #iface.messageBar().pushMessage("2to3", msg, level=Qgis.Info)
 
                 #2to3 uri = QgsDataSourceURI()
                 uri = QgsDataSourceUri()
@@ -1765,6 +1792,10 @@ class POSTGISInfo(object):
                     QgsProject.instance().layerTreeRoot().findLayer(vl).setItemVisibilityChecked(visible)
 
                     if loadQML:
+                        #iface.messageBar().pushMessage("loadVectorLayerBase", "readQmlUrl: %s" % (readQmlUrl), level=Qgis.Info)
+                        QgsMessageLog.logMessage('loadVectorLayerBase: readQmlUrl: {}'.format(readQmlUrl), LOGGER_TAG, Qgis.Info)
+                        QgsMessageLog.logMessage('loadVectorLayerBase: self.id: {}'.format(self.id), LOGGER_TAG, Qgis.Info)
+                        QgsMessageLog.logMessage('loadVectorLayerBase: self.category_backup: {}'.format(self.category_backup), LOGGER_TAG, Qgis.Info)
                         self.loadQML(readQmlUrl, vl, self.id, self.category_backup)
                         pass
 
@@ -1792,6 +1823,9 @@ class POSTGISInfo(object):
         @param layer_id: layer_id, id trasportato dal json univoco all'interno della stessa categoria
         @param layer_cat: categoria del layer per rendere univoca la ricerca della legenda qml
         """
+        LOGGER = logging.getLogger()
+        LOGGER.setLevel(logging.DEBUG)
+
         error = None
         userFilePath = ""
         class_name = self.__class__.__name__
@@ -1806,30 +1840,49 @@ class POSTGISInfo(object):
             query_args = {'id': layer_id, 'cat': layer_cat, 'tab': tab}
             #encoded_args = urllib.urlencode(query_args)
             #2to3 encoded_args = urllib.unquote_plus(urllib.urlencode(query_args))
-            encoded_args = urllib.parse.unquote_plus(urllib.parse.urlencode(query_args))
-
+            #2to3 encoded_args = urllib.parse.unquote_plus(urllib.parse.urlencode(query_args))
+            
+            # loadQML encoded_args: id=8660&cat=DATI DI BASE&tab=vector  !!!gestire gli spazi!!!
+            # https://stackoverflow.com/questions/21823965/use-20-instead-of-for-space-in-python-query-parameters
+            encoded_args = urllib.parse.urlencode(query_args, quote_via=urllib.parse.quote)
+           
+            LOGGER.debug('loadQML urlopen url: %s' % (url))
             LOGGER.debug('loadQML encoded_args: %s' % (encoded_args))
+            
+            QgsMessageLog.logMessage('loadQML: url: {}'.format(url), LOGGER_TAG, Qgis.Info)
+            QgsMessageLog.logMessage('loadQML: encoded_args: {}'.format(encoded_args), LOGGER_TAG, Qgis.Info)
 
+            # http://osgis2.csi.it/csiatlante/prod/atlante/qgsreadqml.php?id=8660&cat=DATI%20DI%20BASE&tab=vector
+            byte_encoded_args = encoded_args.encode('utf-8')
             #2to3 filehandle = urllib2.urlopen(url, encoded_args)
-            filehandle = urllib.urlopen(url, encoded_args)
+                    
+            #filehandle = urllib.request.urlopen(url, byte_encoded_args)
+            #lines = csiutils.RemoveCR(filehandle.readlines())
+            #filehandle.close()
+            
+            with urllib.request.urlopen(url, byte_encoded_args) as response:
+                with tempfile.NamedTemporaryFile(suffix='.qml', delete=False) as tmp_file:
+                    shutil.copyfileobj(response, tmp_file)
 
-            lines = csiutils.RemoveCR(filehandle.readlines())
-            filehandle.close()
+            userFilePath = tmp_file.name
+            LOGGER.debug('loadQML userFilePath: %s' % (userFilePath))
 
-            LOGGER.debug('loadQML len(lines): %s' % (str(len(lines))))
+            layer.loadNamedStyle(userFilePath, False)
+            QgsMessageLog.logMessage('layer.loadNamedStyle: {}'.format(userFilePath), LOGGER_TAG, Qgis.Info)
+                
+#            if len(lines) > 0:
+#                tx = '\n'.join(lines)
+#                LOGGER.debug('loadQML tx: %s' % (tx))
+#                tf = tempfile.NamedTemporaryFile(suffix='.qml', delete=False)
+#                userFilePath = tf.name
+#                LOGGER.debug('loadQML userFilePath: %s' % (userFilePath))
+#                # tf = open(userFilePath,"wb")
+#                tf.write(tx)
+#                tf.flush()
+#                tf.close()
+#                layer.loadNamedStyle(userFilePath, False)
+#                QgsMessageLog.logMessage('layer.loadNamedStyle: {}'.format(userFilePath), LOGGER_TAG, Qgis.Info)
 
-            if len(lines) > 0:
-                tx = '\n'.join(lines)
-                # LOGGER.debug('loadQML tx: %s' % (tx))
-
-                tf = tempfile.NamedTemporaryFile(suffix='.qml', delete=False)
-                userFilePath = tf.name
-                # tf = open(userFilePath,"wb")
-                tf.write(tx)
-                tf.flush()
-                tf.close()
-
-                layer.loadNamedStyle(userFilePath)
         #except (IOError, OSError, ValueError), e:
         except Exception as ex:
             #raise
@@ -1948,7 +2001,7 @@ class POSTGISInfo(object):
         return pwd
 
     @classmethod
-    def getPasswordCoax(cls, host, port, database, username):
+    def getPasswordCoax(cls, iface, host, port, database, username):
         """
         Cerca e restituisce una password dal portafoglio delle connessioni utente.
         Se non la trova permette di inserire una password per alimentare il portafoglio.
@@ -1969,6 +2022,9 @@ class POSTGISInfo(object):
             while looptest:
                 tentativi = tentativi - 1
                 pwd = portfolio.getPassword(host, port, database, username)
+                
+                #msg = "pwd = %s" % (pwd)
+                #iface.messageBar().pushMessage("getPasswordCoax", msg, level=Qgis.Info)
 
                 if pwd is None or not cls.testConnection(host, port, database, username, pwd):
                     QMessageBox.information(None, "Errore", "Errore di connessione DB dati:\n\ncontrollare i parametri e la password\n\nhost: %s\nport: %s\ndatabase: %s\nutente: %s" % (host, port, database, username))
@@ -2444,6 +2500,7 @@ class INDICAInfo(POSTGISInfo):
             LOGGER.debug('loadQML encoded_args: %s' % (encoded_args))
 
             #2to3 filehandle = urllib2.urlopen(url, encoded_args)
+            # TODO: urllib.request.urlopen(BYTES)
             filehandle = urllib.urlopen(url, encoded_args)
 
             lines = csiutils.RemoveCR(filehandle.readlines())
@@ -2707,6 +2764,7 @@ class RASTERInfo:
             encoded_args = urllib.parse.urlencode(query_args)
 
             #2to3 filehandle = urllib2.urlopen(url, encoded_args)
+            # TODO: urllib.request.urlopen(BYTES)
             filehandle = urllib.urlopen(url, encoded_args)
 
             lines = csiutils.RemoveCR(filehandle.readlines())
@@ -3001,7 +3059,7 @@ class ConnectionsPortfolio(object):
             names = s.childGroups()    # QStringList # API 2.0: Replace QStringList with list
             s.endGroup()
             for name in names:
-                msg = "ConnectionsPortfolio: %s" % (name)
+                msg = "ConnectionsPortfolio name: %s" % (name)
                 QgsMessageLog.logMessage(msg, 'CSI Atlante')
                 c = ConnectionDTO()
                 c.name = name
@@ -3016,6 +3074,11 @@ class ConnectionsPortfolio(object):
                 c.port = s.value(key + "/port", "", type=str)
                 c.database = s.value(key + "/database", "", type=str)
                 c.password = s.value(key + "/password", "", type=str)
+                QgsMessageLog.logMessage("ConnectionsPortfolio c.username: %s" % (c.username) , 'CSI Atlante')
+                QgsMessageLog.logMessage("ConnectionsPortfolio c.host: %s" % (c.host) , 'CSI Atlante')
+                QgsMessageLog.logMessage("ConnectionsPortfolio c.port: %s" % (c.port) , 'CSI Atlante')
+                QgsMessageLog.logMessage("ConnectionsPortfolio c.database: %s" % (c.database) , 'CSI Atlante')
+                QgsMessageLog.logMessage("ConnectionsPortfolio c.password: %s" % (c.password) , 'CSI Atlante')
                 c.compressed = self.compress(c.password, c.name)
                 dictConnections[c.name] = c
 
@@ -3105,6 +3168,7 @@ class ConnectionsPortfolio(object):
         @param key: chiave unicode formattata user@host:port:DATABASE
         """
         if key in self.connections:
+            QgsMessageLog.logMessage("key in self.connections: %s" % (key) , 'CSI Atlante')
             c = self.connections[key]
             pwd = c.password
         else:
