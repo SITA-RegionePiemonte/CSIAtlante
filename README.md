@@ -1,5 +1,9 @@
 # CSI Atlante - Accesso organizzato a dati e geoservizi
 
+
+Attenzione : il presente plugin non verrà più aggiornato in quanto è stata implementata la nuova versione AtlanteWI disponibile al seguente indirizzo https://github.com/SITA-RegionePiemonte/CSIAtlanteWI
+
+
 CSI Atlante è un plugin del software GIS 
 [QGIS](https://qgis.org "QGIS - A Free and Open Source Geographic Information System")
 
